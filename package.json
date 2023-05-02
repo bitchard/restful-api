@@ -4,12 +4,14 @@
   "description": "Building a rest api with node.js, express and mongoDB to better show my understanding of how the CRUD sytem works.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongoose": "^7.1.0",
     "nodemon": "^2.0.22"
   }
 }
