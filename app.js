@@ -19,7 +19,13 @@ app.get('/posts', (req, res) => {
 
 
 //Connect to Db
-mongoose.connect('mongodb+srv://richgarcia7525:<DanMarkson308>@restapi.hfobuse.mongodb.net/?retryWrites=true&w=majority', () => console.log('connected to DB!')
-);
+const mongoUrl="mongodb+srv://richgarcia7525:DanMarkson308@restapi.hfobuse.mongodb.net/?retryWrites=true&w=majority"
+
+mongoose.connect(mongoUrl, {
+    useNewUrlParser:true
+}).then(() => { console.log ("Connected to Database");})
+.catch (e=> console.log(e))
 //This is how we can start listening to our server
-app.listen(3000);
+app.listen(3000, () => {
+    console.log("Server Started");
+});
